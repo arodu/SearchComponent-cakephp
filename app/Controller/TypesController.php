@@ -13,7 +13,7 @@ class TypesController extends AppController {
  *
  * @var array
  */
-	public $components = array('Paginator','Search');
+ public $components = array('Paginator','Flash','Session','Search');
 
 /**
  * index method

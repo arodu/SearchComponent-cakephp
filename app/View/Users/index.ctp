@@ -1,9 +1,4 @@
-
-
-
 <?php $this->Search->activatePaginator($this->Paginator); ?>
-
-
 
 <div class="users index">
 	<h2><?php echo __('Users'); ?></h2>

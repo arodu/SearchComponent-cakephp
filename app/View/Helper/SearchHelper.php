@@ -83,11 +83,11 @@ class SearchHelper extends AppHelper {
 		}
 		return $out;
 	}
- 
+
 	public function input($fieldName, $attributes = array()){
 		$select = false;
-		$output=null;
-		
+		$output = null;
+
 		$defaultAttributes = array(
 			//'name'=>$this->_prefix.$fieldName,
 			'name'=> $this->construcName($fieldName,true),
@@ -107,7 +107,7 @@ class SearchHelper extends AppHelper {
 			if(!is_array($fieldName)){
 				$varName = Inflector::variable(Inflector::pluralize(preg_replace('/_id$/', '', $fieldName)));
 				$varOptions = $this->_View->get($varName);
-				
+
 				if(isset($attributes['options']) or is_array($varOptions)){
 					$select=true;
 					$defaultAttributes['empty'] = '-- seleccione --';
@@ -128,7 +128,7 @@ class SearchHelper extends AppHelper {
 					$attributes['onkeypress']='(event.keyCode==13 ? this.form.submit() : true)';
 				}
 			}
-		
+
 
 		//	field
 			$field = 'search'.ucfirst($this->construcName($fieldName,false));
@@ -159,7 +159,7 @@ class SearchHelper extends AppHelper {
 	}
 
 	public function inputPageLimit($attributes = array()){
-		
+
 		$defaultAttributes = array(
 				'options'=>array(
 					'Elementos por pagina'=>array('1'=>'1','10'=>'10','20'=>'20','30'=>'30','50'=>'50','100'=>'100'),

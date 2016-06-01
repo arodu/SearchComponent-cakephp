@@ -152,8 +152,8 @@ class SearchHelper extends AppHelper {
 
 	protected function _getValue($fieldName = null){
 		if($fieldName == 'pageLimit'){
-			//return @$this->params['search']['pageLimit'];
-			return @$this->request->query['pageLimit'];
+			return @$this->params['search']['pageLimit'];
+			//return @$this->request->query['pageLimit'];
 		}else{
 			return ( (isset($this->params['search']['pass'][$this->construcName($fieldName)]) ) ? $this->params['search']['pass'][$this->construcName($fieldName)] : '' );
 		}

@@ -5,12 +5,7 @@
 
 	<?php echo $this->Search->create('User',array('autoSubmit'=>true));?>
 
-	<?php echo $this->Search->inputPageLimit();
-
-	
-
-
-	?>
+	<?php echo $this->Search->inputPageLimit(); ?>
 
 	<table cellpadding="0" cellspacing="0">
 	<thead>

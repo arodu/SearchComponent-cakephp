@@ -22,6 +22,9 @@ class UsersController extends AppController {
  */
 	public function index() {
 		$this->User->recursive = 0;
+		$this->Paginator->settings = array(
+			'limit'=>$this->Search->pageLimit()
+		);
 		$users = $this->Paginator->paginate('User', $this->Search->getConditions() );
 		$types = $this->User->Type->find('list');
 		$this->set(compact('users','types'));

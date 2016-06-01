@@ -152,14 +152,14 @@ class SearchHelper extends AppHelper {
 
 	protected function _getValue($fieldName = null){
 		if($fieldName == 'pageLimit'){
-			return $this->params['search']['pageLimit'];
+			//return @$this->params['search']['pageLimit'];
+			return @$this->request->query['pageLimit'];
 		}else{
 			return ( (isset($this->params['search']['pass'][$this->construcName($fieldName)]) ) ? $this->params['search']['pass'][$this->construcName($fieldName)] : '' );
 		}
 	}
 
 	public function inputPageLimit($attributes = array()){
-
 		$defaultAttributes = array(
 				'options'=>array(
 					'Elementos por pagina'=>array('1'=>'1','10'=>'10','20'=>'20','30'=>'30','50'=>'50','100'=>'100'),
